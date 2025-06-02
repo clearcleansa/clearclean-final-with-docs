@@ -7,7 +7,7 @@
 <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
 <link href="assets/images/favicon.png" rel="icon"/>
 <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"/>
-<title>شركة كلير كلين | خدمات تنظيف احترافية في جدة</title>
+<title>كلير كلين | من نحن</title>
 <link href="./assets/css/unpkg.com_blaze-slider@1.9.3_dist_blaze.css" rel="stylesheet"/>
 <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/aos.css" rel="stylesheet"/>
@@ -15,8 +15,22 @@
 <link href="assets/css/superclasses.css" rel="stylesheet"/>
 <link href="assets/css/custom.css" rel="stylesheet"/>
 <link href="assets/css/mobile.css" rel="stylesheet"/>
+<style>
+  body[dir="rtl"] { font-family: 'Cairo', sans-serif; }
+  body[dir="ltr"] { font-family: 'Roboto', sans-serif; }
+  .lang-switcher { position: absolute; top: 20px; left: 20px; z-index: 1000; }
+  .lang-switcher button { margin: 0 2px; }
+  .about-hero { background: #f8fafc; padding: 60px 0 40px 0; text-align: center; }
+  .about-section { padding: 40px 0; }
+  .values-section { background: #f9f9f9; padding: 40px 0; }
+  .social-links a { margin: 0 8px; font-size: 1.5em; color: #1d7fa3; }
+</style>
 </head>
-<body>
+<body dir="rtl" lang="ar">
+<div class="lang-switcher">
+  <button onclick="setLang('ar')">العربية</button>
+  <button onclick="setLang('en')">English</button>
+</div>
 <div class="loader-mask">
 <div class="loader">
 <div></div>
@@ -126,8 +140,8 @@
 <div class="row">
 <div class="col-lg-7 col-md-7">
 <div class="banner-title">
-<h1 class="text-white" data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</h1>
-<p class="mb-0" data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</p>
+<h1 class="text-white" data-aos="fade-up" data-aos-duration="600">كلير كلين | من نحن</h1>
+<p class="mb-0" data-aos="fade-up" data-aos-duration="600">شركة كلير كلين متخصصة في تقديم خدمات النظافة الشاملة بجودة واحترافية عالية. نؤمن بأن النظافة فلسفة تعكس جودة الحياة ونسعى لتقديم خدمات تتجاوز التوقعات.</p>
 </div>
 </div>
 <div class="col-lg-5 col-md-5 order-md-0 order-1">
@@ -197,15 +211,15 @@
 <figure class="d-flex align-items-center justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="600">
 <img alt="mission-icon" src="assets/images/mission-icon.png"/>
 </figure>
-<h2 data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</h2>
-<p class="mb-0" data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</p>
+<h2 data-aos="fade-up" data-aos-duration="600">رسالتنا</h2>
+<p class="mb-0" data-aos="fade-up" data-aos-duration="600">نلتزم بأعلى معايير الجودة لضمان رضا عملائنا وتقديم بيئات نقية وصحية.</p>
 </div>
 <div class="goals-box-item">
 <figure class="d-flex align-items-center justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="600">
 <img alt="vision-icon" src="assets/images/vision-icon.png"/>
 </figure>
-<h2 data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</h2>
-<p class="mb-0" data-aos="fade-up" data-aos-duration="600">شركة كلير كلين – خدمات تنظيف عالية الجودة في جدة</p>
+<h2 data-aos="fade-up" data-aos-duration="600">رؤيتنا</h2>
+<p class="mb-0" data-aos="fade-up" data-aos-duration="600">أن نكون الشركة الرائدة في مجال خدمات النظافة ونساهم في تحسين جودة الحياة.</p>
 </div>
 </div>
 </div>
@@ -588,5 +602,14 @@
 <script>
         AOS.init();
     </script>
+<script>
+function setLang(lang) {
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-ar], [data-en]').forEach(function(el) {
+    el.textContent = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+  });
+}
+</script>
 </body>
 </html>

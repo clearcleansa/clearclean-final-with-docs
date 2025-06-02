@@ -7,7 +7,7 @@
 <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
 <link href="assets/images/favicon.png" rel="icon"/>
 <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"/>
-<title>شركة كلير كلين | خدمات تنظيف احترافية في جدة</title>
+<title>كلير كلين | حلول نظافة متميزة</title>
 <link href="./assets/css/unpkg.com_blaze-slider@1.9.3_dist_blaze.css" rel="stylesheet"/>
 <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/owl.carousel.min.css" rel="stylesheet"/>
@@ -15,8 +15,23 @@
 <link href="assets/css/superclasses.css" rel="stylesheet"/>
 <link href="assets/css/custom.css" rel="stylesheet"/>
 <link href="assets/css/mobile.css" rel="stylesheet"/>
+<style>
+  body[dir="rtl"] { font-family: 'Cairo', sans-serif; }
+  body[dir="ltr"] { font-family: 'Roboto', sans-serif; }
+  .lang-switcher { position: absolute; top: 20px; left: 20px; z-index: 1000; }
+  .lang-switcher button { margin: 0 2px; }
+  .hero-section { background: #f8fafc; padding: 60px 0 40px 0; text-align: center; }
+  .services-section { background: #fff; padding: 40px 0; }
+  .service-card { border-radius: 12px; box-shadow: 0 2px 8px #e0e0e0; padding: 24px; margin: 12px; background: #f9f9f9; }
+  .about-section, .contact-section { padding: 40px 0; }
+  .social-links a { margin: 0 8px; font-size: 1.5em; color: #1d7fa3; }
+</style>
 </head>
-<body>
+<body dir="rtl" lang="ar">
+<div class="lang-switcher">
+  <button onclick="setLang('ar')">العربية</button>
+  <button onclick="setLang('en')">English</button>
+</div>
 <div class="loader-mask">
 <div class="loader">
 <div></div>
@@ -926,5 +941,21 @@
 <script>
         AOS.init();
     </script>
+<script>
+function setLang(lang) {
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-ar], [data-en]').forEach(function(el) {
+    el.textContent = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+  });
+  document.querySelectorAll('input, textarea').forEach(function(el) {
+    if (lang === 'ar') {
+      el.placeholder = '';
+    } else {
+      el.placeholder = '';
+    }
+  });
+}
+</script>
 </body>
 </html>
